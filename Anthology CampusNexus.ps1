@@ -1,9 +1,4 @@
-#
-# Anthology_SIS.ps1 - Anthology SIS (CampusNexus) API
-#    Migrated to Powershell connector due to special handling needed for Writeback calls.
-#        Specifically, can use OData to pull data, but Command API Endpoints to write data.
-#        Need to first pull a record, generate the payload with any changes, and save that record back.
-#
+# Anthology CampusNexus.ps1 - Anthology CampusNexus
 
 $Log_MaskableKeys = @(
     # Put a comma-separated list of attribute names here, whose value should be masked before 
