@@ -18,7 +18,7 @@ function Idm-SystemInfo {
         [string] $ConnectionParams
     )
 
-    Log info "-Connection=$Connection -TestConnection=$TestConnection -Configuration=$Configuration -ConnectionParams='$ConnectionParams'"
+    Log verbose "-Connection=$Connection -TestConnection=$TestConnection -Configuration=$Configuration -ConnectionParams='$ConnectionParams'"
 
     if ($Connection) {
         @(
@@ -117,7 +117,7 @@ function Idm-SystemInfo {
         @()
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-OnUnload {
@@ -1137,7 +1137,7 @@ function Idm-AgencyBranchesRead {
     $Class = "AgencyBranches"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-AgenciesRead {
@@ -1149,7 +1149,7 @@ function Idm-AgenciesRead {
     $Class = "Agencies"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-AgencyTypesRead {
@@ -1161,7 +1161,7 @@ function Idm-AgencyTypesRead {
     $Class = "AgencyTypes"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-BuildingsRead {
@@ -1173,7 +1173,7 @@ function Idm-BuildingsRead {
     $Class = "Buildings"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-CampusGroupsRead {
@@ -1185,7 +1185,7 @@ function Idm-CampusGroupsRead {
     $Class = "CampusGroups"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-CountriesRead {
@@ -1197,7 +1197,7 @@ function Idm-CountriesRead {
     $Class = "Countries"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-CountiesRead {
@@ -1209,7 +1209,7 @@ function Idm-CountiesRead {
     $Class = "Counties"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-EmployerGroupsRead {
@@ -1221,7 +1221,7 @@ function Idm-EmployerGroupsRead {
     $Class = "EmployerGroups"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-EmployerGroupMembersRead {
@@ -1233,7 +1233,7 @@ function Idm-EmployerGroupMembersRead {
     $Class = "EmployerGroupMembers"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-EthnicitiesRead {
@@ -1245,7 +1245,7 @@ function Idm-EthnicitiesRead {
     $Class = "Ethnicities"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-GendersRead {
@@ -1257,7 +1257,7 @@ function Idm-GendersRead {
     $Class = "Genders"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-GenderPronounsRead {
@@ -1269,7 +1269,7 @@ function Idm-GenderPronounsRead {
     $Class = "GenderPronouns"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-IndustriesRead {
@@ -1281,7 +1281,7 @@ function Idm-IndustriesRead {
     $Class = "Industries"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-LocationsRead {
@@ -1293,7 +1293,7 @@ function Idm-LocationsRead {
     $Class = "Locations"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-NationalitiesRead {
@@ -1305,7 +1305,7 @@ function Idm-NationalitiesRead {
     $Class = "Nationalities"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-ProgramGroupsRead {
@@ -1317,7 +1317,7 @@ function Idm-ProgramGroupsRead {
     $Class = "ProgramGroups"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-ResidencyTypesRead {
@@ -1329,7 +1329,7 @@ function Idm-ResidencyTypesRead {
     $Class = "ResidencyTypes"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-ResidencyTypeStatusCodeAssociationsRead {
@@ -1341,7 +1341,7 @@ function Idm-ResidencyTypeStatusCodeAssociationsRead {
     $Class = "ResidencyTypeStatusCodeAssociations"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-ResidencyStatusCodesRead {
@@ -1353,7 +1353,7 @@ function Idm-ResidencyStatusCodesRead {
     $Class = "ResidencyStatusCodes"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-RoomsRead {
@@ -1365,7 +1365,7 @@ function Idm-RoomsRead {
     $Class = "Rooms"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-SchoolDefinedFieldsRead {
@@ -1377,7 +1377,7 @@ function Idm-SchoolDefinedFieldsRead {
     $Class = "SchoolDefinedFields"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-SchoolStatusDetailsRead {
@@ -1389,7 +1389,7 @@ function Idm-SchoolStatusDetailsRead {
     $Class = "SchoolStatusDetails"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-SchoolStatusesRead {
@@ -1401,7 +1401,7 @@ function Idm-SchoolStatusesRead {
     $Class = "SchoolStatuses"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StaffRead {
@@ -1413,7 +1413,7 @@ function Idm-StaffRead {
     $Class = "Staff"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StaffGroupsRead {
@@ -1425,7 +1425,7 @@ function Idm-StaffGroupsRead {
     $Class = "StaffGroups"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StaffGroupFundSourcePermissionsRead {
@@ -1437,7 +1437,7 @@ function Idm-StaffGroupFundSourcePermissionsRead {
     $Class = "StaffGroupFundSourcePermissions"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StaffGroupRefreshRulesRead {
@@ -1449,7 +1449,7 @@ function Idm-StaffGroupRefreshRulesRead {
     $Class = "StaffGroupRefreshRules"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentsRead {
@@ -1461,7 +1461,7 @@ function Idm-StudentsRead {
     $Class = "Students"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentAdvisorsRead {
@@ -1473,7 +1473,7 @@ function Idm-StudentAdvisorsRead {
     $Class = "StudentAdvisors"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentActiveEnrollWithProgramRead {
@@ -1485,7 +1485,7 @@ function Idm-StudentActiveEnrollWithProgramRead {
     $Class = "StudentActiveEnrollWithProgram"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentAgencyBranchesRead {
@@ -1497,7 +1497,7 @@ function Idm-StudentAgencyBranchesRead {
     $Class = "StudentAgencyBranches"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentGroupsRead {
@@ -1509,7 +1509,7 @@ function Idm-StudentGroupsRead {
     $Class = "StudentGroups"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentGroupMembersRead {
@@ -1521,7 +1521,7 @@ function Idm-StudentGroupMembersRead {
     $Class = "StudentGroupMembers"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentEnrollmentPeriodsRead {
@@ -1533,7 +1533,7 @@ function Idm-StudentEnrollmentPeriodsRead {
     $Class = "StudentEnrollmentPeriods"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentRelationshipAddressesRead {
@@ -1545,7 +1545,7 @@ function Idm-StudentRelationshipAddressesRead {
     $Class = "StudentRelationshipAddresses"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentResidencyDetailsRead {
@@ -1557,7 +1557,7 @@ function Idm-StudentResidencyDetailsRead {
     $Class = "StudentResidencyDetails"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentSchoolDefinedFieldValuesRead {
@@ -1569,7 +1569,7 @@ function Idm-StudentSchoolDefinedFieldValuesRead {
     $Class = "StudentSchoolDefinedFieldValues"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-StudentSchoolStatusHistoryRead {
@@ -1581,7 +1581,7 @@ function Idm-StudentSchoolStatusHistoryRead {
     $Class = "StudentSchoolStatusHistory"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-SuffixesRead {
@@ -1593,7 +1593,7 @@ function Idm-SuffixesRead {
     $Class = "Suffixes"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-SystemSchoolStatusDetailsRead {
@@ -1605,7 +1605,7 @@ function Idm-SystemSchoolStatusDetailsRead {
     $Class = "SystemSchoolStatusDetails"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-TitlesRead {
@@ -1617,7 +1617,7 @@ function Idm-TitlesRead {
     $Class = "Titles"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Idm-UsaStatesRead {
@@ -1629,7 +1629,7 @@ function Idm-UsaStatesRead {
     $Class = "UsaStates"
     Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 # Create & Update Logic
@@ -1642,7 +1642,7 @@ function Idm-StudentSchoolDefinedFieldValuesCreate {
         [string] $FunctionParams
     )
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
     $function_params = ConvertFrom-Json2 $FunctionParams
     $system_params   = ConvertFrom-Json2 $SystemParams
 
@@ -1693,12 +1693,12 @@ function Idm-StudentSchoolDefinedFieldValuesCreate {
             $hash_table[$column_name] = $post_response.payload.data.$column_name
         }
             
-        Log info ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
-        Log info ("HashTable: {0}" -f ($hash_table | ConvertTo-Json -Depth 2 ))
+        Log verbose ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
+        Log verbose ("HashTable: {0}" -f ($hash_table | ConvertTo-Json -Depth 2 ))
         # Output new record.
         $hash_table
     }
-    Log info ("Done")
+    Log verbose ("Done")
 }
 
 function Idm-StudentSchoolDefinedFieldValuesUpdate {
@@ -1710,7 +1710,7 @@ function Idm-StudentSchoolDefinedFieldValuesUpdate {
         [string] $FunctionParams
     )
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
     $function_params = ConvertFrom-Json2 $FunctionParams
     $system_params   = ConvertFrom-Json2 $SystemParams
 
@@ -1782,13 +1782,13 @@ function Idm-StudentSchoolDefinedFieldValuesUpdate {
         }
         $post_response = Invoke-RestMethod @params
         
-        #Log info ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
+        #Log verbose ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
         
         # Output new record.
         
         $post_response.payload.data
     }
-    Log info ("Done")
+    Log verbose ("Done")
 }
 
 # Update Student.
@@ -1801,7 +1801,7 @@ function Idm-StudentsUpdate {
         [string] $FunctionParams
     )
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
     $function_params = ConvertFrom-Json2 $FunctionParams
     $system_params   = ConvertFrom-Json2 $SystemParams
 
@@ -1877,12 +1877,12 @@ function Idm-StudentsUpdate {
         }
         $post_response = Invoke-RestMethod @params
         
-        #Log info ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
+        #Log verbose ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
         
         # Output new record.
         $post_response.payload.data
     }
-    Log info ("Done")
+    Log verbose ("Done")
 }
 
 function Idm-StudentRelationshipAddressesCreate {
@@ -1894,7 +1894,7 @@ function Idm-StudentRelationshipAddressesCreate {
         [string] $FunctionParams
     )
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
     $function_params = ConvertFrom-Json2 $FunctionParams
     $system_params   = ConvertFrom-Json2 $SystemParams
 
@@ -1984,12 +1984,12 @@ function Idm-StudentRelationshipAddressesCreate {
             $hash_table[$column_name] = $post_response.payload.data.$column_name
         }
             
-        #Log info ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
-        #Log info ("HashTable: {0}" -f ($hash_table | ConvertTo-Json -Depth 2 ))
+        #Log verbose ("Response: {0}" -f ($post_response | ConvertTo-Json -Depth 2 ))
+        #Log verbose ("HashTable: {0}" -f ($hash_table | ConvertTo-Json -Depth 2 ))
         # Output new record.
         $hash_table
     }
-    Log info ("Done")
+    Log verbose ("Done")
 }
 
 ###
@@ -2003,7 +2003,7 @@ function Get-OData {
         [string] $FunctionParams,
         [string] $Class
     )
-    Log info "-Class=$Class -GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-Class=$Class -GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
     if ($GetMeta) {
         Get-ClassMetaData -SystemParams $SystemParams -Class $Class
@@ -2027,7 +2027,7 @@ function Get-OData {
         $i = 0
         $data = [System.Collections.Generic.List[Object]]::new()
         do {
-            Log info ("Retrieving {2} records {0} - {1}" -f $i, ($i+$system_params.pagesize), $Class)
+            Log verbose ("Retrieving {2} records {0} - {1}" -f $i, ($i+$system_params.pagesize), $Class)
             Write-Information ("Retrieving {2} records {0} - {1}" -f $i, ($i+$system_params.pagesize), $Class)
             $params = @{
                 URI = 'https://{0}/ds/campusnexus/{1}?$skip={2}&$top={3}&$count=true' -f $system_params.tenantId,$Class,$i,$system_params.pagesize
@@ -2058,7 +2058,7 @@ function Get-OData {
             # 2024-03-15 - Turning off logic that rebuilds the objects to match the Property Definition.
             #              It is just too slow in PS 5.1.  In PS 7 would be able to do in parallel.
             
-            #if($i++ % 100 -eq 0) { Log info ('Processing {0} of {1}' -f $i,$data.Count) }
+            #if($i++ % 100 -eq 0) { Log verbose ('Processing {0} of {1}' -f $i,$data.Count) }
             #$obj = $obj_tmpl.PSObject.Copy()
             
             #$l_properties.foreach( {
@@ -2071,7 +2071,7 @@ function Get-OData {
         }
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 function Get-ClassMetaData {
