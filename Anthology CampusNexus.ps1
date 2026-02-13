@@ -1,3 +1,4 @@
+# version: 1.0.1
 # Anthology CampusNexus.ps1 - Anthology CampusNexus
 
 $Log_MaskableKeys = @(
@@ -453,6 +454,20 @@ $Global:Properties = @{
         @{ name = "NsldsStatus"; options = @('default') }
         @{ name = "StatusDescription"; options = @('default') }
         @{ name = "SystemSchoolStatusId"; options = @('default') }
+    )
+    Shifts = @(
+        @{ name = "Id"; options = @('default','key') }
+        @{ name = "CampusGroupId"; options = @('default') }
+        @{ name = "Code"; options = @('default') }
+        @{ name = "CreatedDateTime"; options = @('default') }
+        @{ name = "IsActive"; options = @('default') }
+        @{ name = "IsExcludedCrmIntegration"; options = @('default') }
+        @{ name = "IsSystemCode"; options = @('default') }
+        @{ name = "LastModifiedDateTime"; options = @('default') }
+        @{ name = "LastModifiedUserId"; options = @('default') }
+        @{ name = "Name"; options = @('default') }
+        @{ name = "OtherLanguageCode"; options = @('default') }
+        @{ name = "OtherLanguageDescription"; options = @('default') }
     )
     Staff = @(
         @{ name = "Id"; options = @('default','key') }
@@ -1404,6 +1419,18 @@ function Idm-SchoolStatusesRead {
     Log verbose "Done"
 }
 
+function Idm-ShiftsRead {
+    param (
+        [switch] $GetMeta,
+        [string] $SystemParams,
+        [string] $FunctionParams
+    )
+    $Class = "Shifts"
+    Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
+
+    Log verbose "Done"
+}
+
 function Idm-StaffRead {
     param (
         [switch] $GetMeta,
@@ -1531,7 +1558,7 @@ function Idm-StudentEnrollmentPeriodsRead {
         [string] $FunctionParams
     )
     $Class = "StudentEnrollmentPeriods"
-    Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
+    Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class -Endpoint '/ds/odata'
 
     Log verbose "Done"
 }
@@ -1579,7 +1606,7 @@ function Idm-StudentSchoolStatusHistoryRead {
         [string] $FunctionParams
     )
     $Class = "StudentSchoolStatusHistory"
-    Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class
+    Get-OData -GetMeta:$GetMeta -SystemParams $SystemParams -FunctionParams $FunctionParams -Class $Class -Endpoint "ds/odata"
 
     Log verbose "Done"
 }
@@ -2001,7 +2028,8 @@ function Get-OData {
         [switch] $GetMeta,
         [string] $SystemParams,
         [string] $FunctionParams,
-        [string] $Class
+        [string] $Class,
+        [string] $Endpoint = 'ds/campusnexus'
     )
     Log verbose "-Class=$Class -GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
@@ -2030,7 +2058,7 @@ function Get-OData {
             Log verbose ("Retrieving {2} records {0} - {1}" -f $i, ($i+$system_params.pagesize), $Class)
             Write-Information ("Retrieving {2} records {0} - {1}" -f $i, ($i+$system_params.pagesize), $Class)
             $params = @{
-                URI = 'https://{0}/ds/campusnexus/{1}?$skip={2}&$top={3}&$count=true' -f $system_params.tenantId,$Class,$i,$system_params.pagesize
+                URI = 'https://{0}/{1}/{2}?$skip={3}&$top={4}&$count=true' -f $system_params.tenantId,$Endpoint,$Class,$i,$system_params.pagesize
                 Method = 'Get'
                 Headers = @{
                             authorization = 'ApplicationKey {0}' -f $system_params.apiKey; 
